@@ -1,0 +1,117 @@
+/* Hay 3 formas de editar una etiqueta con css. 
+    1. Usando etiquetas. 
+            p {
+                padding: 0px
+            }
+        En este caso, todas las etiquetas p tendrán un padding de 0px.
+
+    2. Usando clases.
+            <div class="cuadro"></div>
+            <p class="cuadro"></p>
+            .cuadro {
+                padding: 0px
+            }
+        En este caso, todas las etiquetas que tengan una clase llamada cuadro tendrán un padding de 0px. 
+        No importa si la etiqueta es un div, p, span, etc.
+
+    3. Usando ids.
+            <div id="cuadro"></div>
+            #cuadro {
+                padding: 0px
+            }
+        En este caso, la etiqueta que tenga el id cuadro es la única que tendrá un padding de 0px. 
+        Los ids no se pueden repetir, son únicos.
+
+    En términos de jerarquía para seleccionar atributos el orden es: id, clase, etiqueta.
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.contenedor {
+    align-items: center;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.cuadro {
+    background-color: black;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 600px;
+    width: 600px;
+}
+
+.cuadro div {
+    align-items: center;
+    background-color: rgb(250, 235, 215);
+    display: flex;
+    flex-direction: column;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+.cuadro div:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+button {
+    background-color: rgb(218, 238, 255);
+    border: 0px;
+    border-radius: 8px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    outline: none;
+    padding: 20px 10px;
+    width: 200px;
+}
+
+button:hover {
+    background-color: rgb(200, 226, 248);
+    cursor: pointer;
+}
+
+.lineSquareContainer {
+    position: relative;
+}
+
+#linea {
+    background-color: red;
+    display: block;
+    position: absolute;
+}
+
+.jugadores {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+.jugador {
+    background-color: rgb(218, 238, 255);
+    border-radius: 8px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 20px 10px;
+    text-align: center;
+    width: 270px;
+}
+
